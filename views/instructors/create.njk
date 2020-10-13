@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{%block content %}
+
+    <form class="card" method="POST" action="/instructors">
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/88152105/800x000) no-repeat center center / cover"></section>
+
+        <section class="details">
+            <h3 class="title-primary">Detalhes</h3>
+
+            <div class="item">
+                <h4 class="title-details">Avatar URL</h4>
+                <input type="url" name="avatar_url" placeholder="http://">
+            </div>
+
+            <div class="item">
+                <h4 class="title-details">Instrutor</h4>
+                <input type="text" name="nome" placeholder="Nome do instrutor">
+            </div>
+
+            <div class="item">
+                <h4 class="title-details">Idade</h4>
+                <input type="date" name="birth">
+            </div>
+
+            <div class="item">
+                <h4 class="title-details">Sexo</h4>
+                <div class="list-detail-item text">
+                    <label for="gender">Masculino</label>
+                    <input type="radio" name="gender" value="M" checked="checked">
+                </div>
+                <div class="list-detail-item text">
+                    <label for="gender">Feminino</label>
+                    <input type="radio" name="gender" value="F">
+                </div>
+            </div>
+
+            <div class="item">
+                <h4 class="title-details">Área de atuação</h4>
+                <input type="text" name="services" placeholder="Separe os serviços prestados por vírgula">
+            </div>
+            <div class="button-place">
+                <button class="button-primary" type="submit">Salvar</button>
+            </div>
+        </section>
+    </form>
+{%endblock content %}

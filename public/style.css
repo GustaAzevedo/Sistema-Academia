@@ -1,0 +1,187 @@
+/*--------------------------------- Formatação Browser ----------------------------------*/
+*{
+    margin: 0px ; 
+    padding: 0px ;
+    border: 0px ;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px ;
+
+}
+
+:root {
+    --light-yellow: #FFD429;
+    --yellow: #FCCB20;
+    --dark-yellow: #DCA10A;
+    --purple: #6F0FAB;
+    --dark-purple: #4C038C;
+    --ice-white: #F2F2F2;
+
+}
+body {
+    background-color: var(--dark-purple);
+}
+
+/*-------------------------------- MENU INICIO ----------------------------------------------*/
+.menu{
+    background-color: var(--ice-white);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.item-menu{
+    list-style: none;
+    display: inline;
+}
+
+.link-menu{
+    font-size: 23px;
+    text-decoration: none;
+    color: var(--dark-purple);
+    padding: 20px;
+    position: relative;
+}
+
+.ml-2{
+    margin-left: 10px;
+}
+
+.item-menu .active{
+    font-weight: bold;
+    color: var(--dark-yellow);
+}
+
+.link-menu:hover {
+    color: var(--dark-yellow);
+}
+
+.link-menu::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--dark-yellow);
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.link-menu:hover::after {
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+/*----------------------------------- MENU FIM -----------------------------------------*/
+
+/*----------------------------------- CARD INICIO --------------------------------------*/
+.card{
+    background-color: var(--ice-white);
+    width: 800px;
+    min-height: 400px;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.8);
+
+    /*===animation===*/
+    animation: up 700ms forwards ease-in-out;
+
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(15px) ;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*------------------------------- DETAILS ----------------------------------------------*/
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border-bottom: none;
+}
+
+.title-primary,
+.title-details {
+    color: var(--dark-yellow);
+    font-weight: normal;
+    letter-spacing: 0.7px;
+}
+
+.text {
+    color: #555;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.lista-details{
+    list-style: none;
+}
+
+.title-primary{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--dark-purple);
+}
+
+.list-detail-item{
+    padding: 8px 16px;
+    background-color: var(--light-yellow);
+    display: inline-block;
+    border-radius: 16px;
+    color: var(--dark-purple);
+    margin: 8px 4px 0px 0px;
+    font-size: 16px;
+}
+
+/*--------------------------------------- FORM ------------------------------------------*/
+
+input {
+    width: 100%;
+    font-size: 18px;
+    padding: 4px;
+    background-color: var(--ice-white);
+    outline: none;
+}
+
+input[type="radio"] {
+    width: initial;
+}
+
+.button-place{
+    display: flex;
+    justify-content: center;
+}
+
+.button-primary{
+    margin-top: 20px;
+    padding: 8px 24px;
+    background-color: var(--dark-purple);
+    color: var(--ice-white);
+    border-radius: 16px;
+    width: 90%;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+}
+
+.button-primary:hover{
+    width: 100%;
+    background-color: var(--dark-yellow);
+    transition: 0.5s ease;
+}

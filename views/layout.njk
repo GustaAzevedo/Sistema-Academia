@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        {% block head %}
+            <title>Gym Manager</title>
+
+        {% endblock %}
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="menu">
+                <ul class="">
+                    <li class=" item-menu ">
+                        <a class="link-menu active" href="/">Instructors</a>
+                    </li>
+                    <li class=" item-menu ">
+                        <a class="link-menu ml-2" href="/portfolio">Members</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block content %}{% endblock %}
+
+    </body>
+
+</html>
